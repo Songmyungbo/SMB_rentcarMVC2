@@ -28,8 +28,17 @@
 		)
 	
 	</insert>
+	
+	<select id="memberList" resultType="member">
+		select * from user
+	</select>
+	
+	<delete id="memberDelete" parameterType="String">  
+        delete from user where userid=#{id}
+    </delete>
     
-  
-    
+     <select id="memberContent" parameterType="Integer" resultType="member">        
+        select * from user where num=#{num}
+    </select>
    
 </mapper>

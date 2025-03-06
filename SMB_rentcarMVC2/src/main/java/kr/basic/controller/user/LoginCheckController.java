@@ -34,6 +34,9 @@ public class LoginCheckController implements Controller{
 			session.setAttribute("log", UserDAO.getInstance().getMemberNo(id));
 			System.out.println(session.getAttribute("log"));
 			session.setAttribute("loginId", id);
+			if("admin".equals(id)) {
+				session.setAttribute("log", -1);
+			}
 			return "redirect:" + ctx +"/index.do";
 			
 		}

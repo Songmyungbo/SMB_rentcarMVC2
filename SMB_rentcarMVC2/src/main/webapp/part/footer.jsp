@@ -2,8 +2,7 @@
     pageEncoding="UTF-8"%>
 </main>
 <footer>
-	<hr color="blue" size="2">
-	<table>
+	<table class="footer-table">
 		<tr>
 		<td>
 			사업자: 명보주식회사 | 대표 : SMB

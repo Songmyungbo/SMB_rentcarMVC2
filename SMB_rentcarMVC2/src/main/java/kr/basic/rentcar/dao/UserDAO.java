@@ -1,5 +1,8 @@
 package kr.basic.rentcar.dao;
 
+import java.util.List;
+
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -67,6 +70,41 @@ public class UserDAO {
 		}
 		return cnt;
 	}
+
+	public List<MemberVO> memberList() {
+		List<MemberVO> list = null;
+		
+		try(SqlSession session = rentcarConfig.getInstance().openSession()){
+			list = session.selectList("memberList");
+			
+		} catch (Exception e) {
+			System.out.println("memberList 에러");
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+	public MemberVO memberContent(int num) {
+		MemberVO vo = null;
+		try(SqlSession session = rentcarConfig.getInstance().openSession()){
+			vo = session.selectOne("memberContent", num);
+		} catch (Exception e) {
+			System.out.println("memberContent 에러");
+			e.printStackTrace();
+		}
 	
+		return vo;
+	}
+	public int memberDelete(String id) {
+		int cnt = 0;
+		try(SqlSession session = rentcarConfig.getInstance().openSession()){
+			cnt = session.delete("memberDelete", id);
+			session.commit();
+		} catch (Exception e) {
+			System.out.println("memberDelete 에러");
+			e.printStackTrace();
+		}
+		return cnt;
+	}
 	
 }
