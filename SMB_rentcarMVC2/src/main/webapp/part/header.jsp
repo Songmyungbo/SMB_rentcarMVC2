@@ -15,7 +15,7 @@
     <div class="inner">
       <div class="gnb">
         <a href="${ctx}/index.do">
-          <img class="logo" src="${ctx}/img/1.jpg" height="120" alt="Logo">
+          <img class="logo" src="${ctx}/img/logo.jpg" height="120" alt="Logo">
         </a>
         <nav>
           <a href="${ctx}/carReservMain.do">예약하기</a>

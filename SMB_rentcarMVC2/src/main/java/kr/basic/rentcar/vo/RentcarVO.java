@@ -7,10 +7,12 @@ public class RentcarVO {
 	private int category;
 	private int price;
 	private int usepeople;
-	private int totalQty;
+	private int total_qty;
 	private String company;
 	private String img;
 	private String info;
+	
+	
 	public int getNum() {
 		return num;
 	}
@@ -42,10 +44,10 @@ public class RentcarVO {
 		this.usepeople = usepeople;
 	}
 	public int getTotalQty() {
-		return totalQty;
+		return total_qty;
 	}
-	public void setTotalQty(int totalQty) {
-		this.totalQty = totalQty;
+	public void setTotalQty(int total_qty) {
+		this.total_qty = total_qty;
 	}
 	public String getCompany() {
 		return company;
@@ -69,7 +71,7 @@ public class RentcarVO {
 	@Override
 	public String toString() {
 		return "RentcarVO [num=" + num + ", name=" + name + ", category=" + category + ", price=" + price
-				+ ", usepeople=" + usepeople + ", totalQty=" + totalQty + ", company=" + company + ", img=" + img
+				+ ", usepeople=" + usepeople + ", totalQty=" + total_qty + ", company=" + company + ", img=" + img
 				+ ", info=" + info + "]";
 	}
 	

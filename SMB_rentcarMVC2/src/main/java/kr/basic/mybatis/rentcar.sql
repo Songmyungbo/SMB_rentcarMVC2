@@ -77,3 +77,13 @@ INSERT INTO reservation (num, userid, qty, dday, rday, usein, usewifi, usenavi, 
 select * from user;
 select * from rentcar;
 select * from reservation;
+
+select r.reserve_seq,rc.name,r.qty,r.rday,r.dday,r.usein,r.usewifi,r.usenavi,r.useseat
+from reservation r
+inner join user u
+on r.userid = u.userid
+inner join rentcar rc
+on rc.num = r.num
+where u.num= 2;
+
+

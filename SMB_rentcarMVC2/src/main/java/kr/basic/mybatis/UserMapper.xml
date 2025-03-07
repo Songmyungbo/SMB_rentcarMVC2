@@ -40,5 +40,9 @@
      <select id="memberContent" parameterType="Integer" resultType="member">        
         select * from user where num=#{num}
     </select>
+    <select id="getUserId" parameterType="Integer" resultType="String">
+    	select userid from user where num=#{num}
+    </select>
+    
    
 </mapper>

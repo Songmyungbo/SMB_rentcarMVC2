@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.basic.mybatis.RentcarMapper">
+  
+	<select id="carList" resultType="rentcar">
+		select * from rentcar where total_qty>0
+	</select>
+	<select id="oneCar" parameterType="Integer" resultType="rentcar">
+	select * from rentcar where num=#{num}
+	</select>
+	<update id="updateCarQty" parameterType="rentcar">
+		update rentcar 
+		set total_qty = #{totalQty}
+		where num = #{num}
+    </update>
+
+   
+</mapper>

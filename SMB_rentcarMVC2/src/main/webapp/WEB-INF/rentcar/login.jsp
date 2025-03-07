@@ -18,9 +18,6 @@
 		<td colspan="2">
 			<input type="submit" value="로그인">
 		</tr>
-				
-		
-		
 		
 		</table>
 	</form>

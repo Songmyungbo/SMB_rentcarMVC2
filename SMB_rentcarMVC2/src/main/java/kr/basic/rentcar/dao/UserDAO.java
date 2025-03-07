@@ -3,6 +3,8 @@ package kr.basic.rentcar.dao;
 import java.util.List;
 
 
+
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -105,6 +107,17 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 		return cnt;
+	}
+	
+	public String getUserId(int num) {
+		String userid = null;
+		try(SqlSession session = rentcarConfig.getInstance().openSession()){
+			userid = session.selectOne("getUserId",num);
+		} catch (Exception e) {
+			System.out.println("getUserId 에러");
+			e.printStackTrace();
+		}
+		return userid;
 	}
 	
 }
