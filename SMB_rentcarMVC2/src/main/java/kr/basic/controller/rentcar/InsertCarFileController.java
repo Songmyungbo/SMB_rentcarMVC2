@@ -25,7 +25,6 @@ public class InsertCarFileController implements Controller{
         String company = request.getParameter("company");
         String info = request.getParameter("info");
 
-        // 파일 업로드 처리
         String[] fileInfo = FileUtil.uploadFile(request, "img");
         if (fileInfo == null || fileInfo.length < 2) {
             response.setContentType("text/html; charset=UTF-8");
@@ -45,10 +44,9 @@ public class InsertCarFileController implements Controller{
         car.setImg(savedFileName); 
         car.setInfo(info);
 
-        // DB에 저장
         RentcarDAO.getInstance().addCar(car);
         String ctx = request.getContextPath();
-        // 성공 메시지와 리다이렉트
+        
         response.setContentType("text/html; charset=UTF-8");
         response.getWriter().println("<script>alert('차량이 성공적으로 업로드되었습니다.'); location.href='" + ctx + "/carReservMain.do';</script>");
         return null;

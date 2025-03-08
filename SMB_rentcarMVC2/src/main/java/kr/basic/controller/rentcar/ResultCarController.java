@@ -33,10 +33,10 @@ public class ResultCarController implements Controller{
 		int useseat = Integer.parseInt(request.getParameter("useseat"));
 		
 		RentcarVO car = RentcarDAO.getInstance().oneCar(num);
-		int totalQty = car.getTotalQty()-qty; // 몇개 남았는지
-		RentcarDAO.getInstance().updateCarQty(num,totalQty); //이거 sql하고 다 만들어
+		int totalQty = car.getTotalQty()-qty; 
+		RentcarDAO.getInstance().updateCarQty(num,totalQty); 
 		
-		int price = (car.getPrice()*dday)*qty; // 총가격
+		int price = (car.getPrice()*dday)*qty;
 		if(usein == 1) {
 			price += 10000;
 		}

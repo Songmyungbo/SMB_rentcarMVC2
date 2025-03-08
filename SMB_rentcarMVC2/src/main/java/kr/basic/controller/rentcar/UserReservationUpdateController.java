@@ -20,7 +20,7 @@ public class UserReservationUpdateController implements Controller{
 			throws ServletException, IOException {
 		
 		int reserve_seq = Integer.parseInt(request.getParameter("reserve_seq"));
-        int num = Integer.parseInt(request.getParameter("num")); // 차량 번호
+        int num = Integer.parseInt(request.getParameter("num")); 
         int qty = Integer.parseInt(request.getParameter("qty"));
         int dday = Integer.parseInt(request.getParameter("dday"));
         String rday = request.getParameter("rday");

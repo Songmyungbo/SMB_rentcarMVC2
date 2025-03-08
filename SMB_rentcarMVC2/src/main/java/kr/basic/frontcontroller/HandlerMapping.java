@@ -44,9 +44,9 @@ public class HandlerMapping {
 		
 		
 		mappings.put("/registerCar.do", new RegisterCarController());
-		mappings.put("/carReservView.do",new ReserveCarViewController()); // 예약하기
-		mappings.put("/carReserveInfo.do", new CarInfoController()); // 차량 정보
-		mappings.put("/carReservMain.do", new ReservateCarController()); //예약하기 누르면 여러종류 차 나오게하기
+		mappings.put("/carReservView.do",new ReserveCarViewController());
+		mappings.put("/carReserveInfo.do", new CarInfoController()); 
+		mappings.put("/carReservMain.do", new ReservateCarController()); 
 		mappings.put("/resultCar.do", new ResultCarController());
 		mappings.put("/vaildIdAjax.do", new VaildIdAjaxController());
 		

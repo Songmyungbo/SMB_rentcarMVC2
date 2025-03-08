@@ -13,7 +13,7 @@ public class rentcarConfig {
 	static {
 		try {
 			String resource = "kr/basic/mybatis/config.xml";
-			InputStream inputStream = Resources.getResourceAsStream(resource);// 읽기
+			InputStream inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		} catch (Exception e) {
 			e.printStackTrace();
