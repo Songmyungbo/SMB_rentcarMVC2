@@ -50,7 +50,6 @@ header {
     transform: scale(1.05);
 }
 
-/* 네비게이션 스타일 수정 */
 nav a {
     color: #2c3e50;
     text-decoration: none;
@@ -85,7 +84,7 @@ nav a:hover {
     border-radius: 20px;
     background: #e9ecef;
     transition: all 0.3s ease;
-    margin-left: 15px; /* 메뉴와 약간의 간격 */
+    margin-left: 15px;
 }
 
 .welcome-message:hover {
@@ -97,7 +96,7 @@ nav a:hover {
 .main-content {
     flex: 1 0 auto;
     width: 100%;
-    height: calc(100vh - 200px); /* 헤더(140px) + 푸터(60px) */
+    height: calc(100vh - 200px);
     background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
     display: flex;
     justify-content: center;
@@ -117,12 +116,54 @@ nav a:hover {
     transform: scale(1.02);
 }
 
+/* 차량 목록 스타일 (Flex로 변경) */
+.car-list {
+    display: flex;
+    flex-wrap: wrap; /* 줄 바꿈 허용 */
+    gap: 30px; /* 카드 간격 */
+    max-width: 1400px;
+    margin: 40px auto; /* 중앙 정렬 및 상하 여백 */
+    padding: 0 20px;
+    justify-content: center; /* 카드를 중앙 정렬 */
+}
+
+.car-card {
+    flex: 1 1 calc(33.333% - 60px); /* 한 줄에 3개씩 (간격 고려) */
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 300px; /* 카드가 너무 작아지지 않도록 최소 너비 설정 */
+    max-width: 400px; /* 카드가 너무 커지지 않도록 최대 너비 설정 */
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.car-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.car-name {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    background: #f8f9fa;
+}
+
 footer {
     padding: 20px;
     text-align: center;
     background-color: #ffffff;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
 }
 
 .footer-table {
