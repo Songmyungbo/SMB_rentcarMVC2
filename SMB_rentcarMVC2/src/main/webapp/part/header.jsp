@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>mvc2 </title>
-<link rel="stylesheet" type="text/css" href="${ctx}/css/style.css?after">
+<link rel="stylesheet" type="text/css" href="${ctx}/css/style.css"/>
 </head>
 <body>
 

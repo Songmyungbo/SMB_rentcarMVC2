@@ -45,7 +45,7 @@ public class UpdateRentcarAProController implements Controller{
         RentcarDAO.getInstance().updateRentCar(car);
         String ctx = request.getContextPath();
         response.setContentType("text/html; charset=UTF-8");
-        response.getWriter().println("<script>alert('차량 정보가 성공적으로 수정되었습니다.'); location.href='" + ctx + "/carReservMain.do';</script>");
+        response.getWriter().println("<script>alert('차량 정보가 수정되었습니다!'); location.href='" + ctx + "/carReservMain.do';</script>");
         return null;
 		
 	}
