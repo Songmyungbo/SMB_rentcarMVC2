@@ -26,9 +26,16 @@ public class ReserveCarViewController implements Controller{
 		}
 			int log = (int) request.getSession().getAttribute("log");
 			
-			List<ReservationListVO> list = ReservationDAO.getInstance().getReservationList(log);
+			List<ReservationListVO> list;
 			
-			if(list.size() == 0) {
+			if(log == -1) {
+				list = ReservationDAO.getInstance().getAllReservations();
+			}else {
+				list = ReservationDAO.getInstance().getReservationList(log);
+			}
+			
+			
+			if(list == null|| list.size() == 0) {
 				request.setAttribute("reservList", null);
 			}else {
 				request.setAttribute("reservList", list);

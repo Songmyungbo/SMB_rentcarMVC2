@@ -2,6 +2,7 @@ package kr.basic.controller.rentcar;
 
 import java.io.IOException;
 
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,7 +13,7 @@ import kr.basic.rentcar.dao.UserDAO;
 import kr.basic.rentcar.vo.RentcarVO;
 import kr.basic.rentcar.vo.ReservationVO;
 
-public class resultCarController implements Controller{
+public class ResultCarController implements Controller{
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)

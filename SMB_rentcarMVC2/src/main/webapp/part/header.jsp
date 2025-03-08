@@ -21,9 +21,14 @@
           <a href="${ctx}/carReservMain.do">예약하기</a>
           <a href="${ctx}/carReservView.do">예약확인</a>
           <a href="${ctx}/board.do">자유게시판</a>
+          <c:if test="${log eq null}">
           <a href="${ctx}/memberJoin.do">회원가입</a>
+          </c:if>
           <c:if test="${log eq null}">
             <a href="${ctx}/login.do">로그인</a>
+          </c:if>
+          <c:if test="${log eq -1}">
+			<a href="${ctx}/insertCar.do">차량업로드</a>          
           </c:if>
           <c:if test="${log ne null}">
             <a href="${ctx}/logOut.do">로그아웃</a>

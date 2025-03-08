@@ -31,6 +31,9 @@
     			<td>${reserv.usewifi == 1? '적용' : '미적용'}</td>
     			<td>${reserv.usenavi == 1? '적용' : '미적용'}</td>
     			<td>${reserv.useseat == 1? '적용' : '미적용'}</td>
+    			<td><button onclick="location.href='${ctx}/userReservationInfo.do?seq=${reserv.reserve_seq}'">예약상세보기</button></td>
+    			<td><button onclick="location.href='${ctx}/userReservationDeleteInfo.do?seq=${reserv.reserve_seq}'">삭제하기</button></td>
+    			
     		</tr>
     	</c:forEach>
     	</table>

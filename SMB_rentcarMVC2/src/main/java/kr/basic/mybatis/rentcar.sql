@@ -77,6 +77,7 @@ INSERT INTO reservation (num, userid, qty, dday, rday, usein, usewifi, usenavi, 
 select * from user;
 select * from rentcar;
 select * from reservation;
+delete from rentcar where num = 19;
 
 select r.reserve_seq,rc.name,r.qty,r.rday,r.dday,r.usein,r.usewifi,r.usenavi,r.useseat
 from reservation r

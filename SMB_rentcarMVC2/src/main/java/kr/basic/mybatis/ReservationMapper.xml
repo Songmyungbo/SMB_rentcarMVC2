@@ -20,5 +20,28 @@
 		where u.num=#{log};
 	
 	</select>
+	
+	<select id="getOneReservation" parameterType="Integer" resultType="reserveDetail">
+        select r.reserve_seq, rc.name, r.num, r.qty, r.rday, r.dday, r.usein, r.usewifi, r.usenavi, r.useseat, rc.img
+        from reservation r
+        inner join rentcar rc on rc.num = r.num
+        where r.reserve_seq = #{reserve_seq}
+    </select>
+
+    <update id="updateReservation" parameterType="reserve">
+        update reservation
+        set qty = #{qty}, dday = #{dday}, rday = #{rday}, usein = #{usein}, usewifi = #{usewifi}, usenavi = #{usenavi}, useseat = #{useseat}
+        where reserve_seq = #{reserve_seq}
+    </update>
+
+    <delete id="deleteReservation" parameterType="Integer">
+        delete from reservation where reserve_seq = #{reserve_seq}
+    </delete>
+    
+    <select id="getAllReservations" resultType="reserveList">
+        select r.reserve_seq, rc.name, r.num, r.qty, r.rday, r.dday, r.usein, r.usewifi, r.usenavi, r.useseat
+        from reservation r
+        inner join rentcar rc on rc.num = r.num
+    </select>
    
 </mapper>

@@ -15,6 +15,27 @@
 		set total_qty = #{totalQty}
 		where num = #{num}
     </update>
-
+	<insert id="addCar" parameterType="rentcar">
+		insert into rentcar (name, category, price, usepeople, total_qty, company,img, info)
+		values (#{name}, #{category}, #{price}, #{usepeople}, #{totalQty}, #{company}, #{img}, #{info})
+	</insert>
+	<delete id="deleteRentCar" parameterType="Integer">
+		delete from rentcar where num = #{num}
+	</delete>
+	<delete id="deleteReservByCarNum" parameterType="Integer">
+		delete from reservation where num = #{num}
+	</delete>
+	<update id="updateRentCar" parameterType="rentcar">
+		update rentcar
+		set name = #{name},
+			category = #{category},
+			price = #{price},
+			usepeople = #{usepeople},
+			total_qty = #{totalQty},
+			company = #{company},
+			img = #{img},
+			info = #{info}
+		where num = #{num}		
+	</update>
    
 </mapper>

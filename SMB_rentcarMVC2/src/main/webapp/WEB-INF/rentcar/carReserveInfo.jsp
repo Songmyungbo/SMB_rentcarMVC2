@@ -57,9 +57,12 @@
             <input type="hidden" name="num" value="${car.num}"/>
             <button class="reserve-Btn">옵션선택</button>
         </c:if>
+        <c:if test="${log eq -1}">
+        	<button type="button" class="update-Btn" onclick="location.href='${ctx}/updateRentCar.do?num=${car.num}'">차량정보수정</button>
+        	<button type="button" class="remove-Btn" onclick="location.href='${ctx}/deleteRentCar.do?num=${car.num}'">차량삭제</button>
+        </c:if>
     </td>
 	</tr>
-    
     </table>
     </form>
     </div>

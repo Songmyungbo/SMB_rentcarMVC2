@@ -8,7 +8,8 @@
   <typeAliases>
       <typeAlias type="kr.basic.rentcar.vo.MemberVO" alias="member"/>     
       <typeAlias type="kr.basic.rentcar.vo.ReservationVO" alias="reserve"/>     
-      <typeAlias type="kr.basic.rentcar.vo.ReservationListVO" alias="reserveList"/>     
+      <typeAlias type="kr.basic.rentcar.vo.ReservationListVO" alias="reserveList"/> 
+      <typeAlias type="kr.basic.rentcar.vo.ReservationDetailVO" alias="reserveDetail"/>    
       <typeAlias type="kr.basic.rentcar.vo.RentcarVO" alias="rentcar"/>     
   </typeAliases> 
   

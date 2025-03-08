@@ -2,6 +2,7 @@ package kr.basic.controller.rentcar;
 
 import java.io.IOException;
 
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -13,9 +14,6 @@ public class InsertCarController implements Controller{
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		return null;
-		
-		
+		return "insertCar";
 	}
-
 }
