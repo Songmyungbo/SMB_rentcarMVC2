@@ -36,7 +36,7 @@ public class ResultCarController implements Controller{
 		int totalQty = car.getTotalQty()-qty; 
 		RentcarDAO.getInstance().updateCarQty(num,totalQty); 
 		
-		int price = (car.getPrice()*dday)*qty;
+		int price = (car.getPrice()*dday)*qty; 
 		if(usein == 1) {
 			price += 10000;
 		}

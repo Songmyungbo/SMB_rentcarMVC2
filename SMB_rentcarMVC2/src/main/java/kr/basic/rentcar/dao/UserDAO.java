@@ -39,7 +39,8 @@ public class UserDAO {
 	public int getMemberNo(String id) {
 		int cnt = 0;
 		try(SqlSession session = rentcarConfig.getInstance().openSession()){
-			cnt = session.selectOne("getMemberNo",id);
+			Integer result = session.selectOne("getMemberNo",id);
+			cnt = (result != null)?result : 0;
 		}catch(Exception e) {
 			System.out.println("getMemberNo 에러");
 			e.printStackTrace();
@@ -118,6 +119,28 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 		return userid;
+	}
+
+	public void updateUser(MemberVO vo) {
+		try(SqlSession session = rentcarConfig.getInstance().openSession()){
+			session.update("updateUser",vo);
+			session.commit();
+		} catch (Exception e) {
+			System.out.println("updateUser 에러");
+			e.printStackTrace();
+		}
+		
+	}
+	public int deleteReserByUserId(String userid) {
+		int cnt = 0;
+		try(SqlSession session = rentcarConfig.getInstance().openSession()){
+			cnt = session.delete("deleteReserByUserId",userid);
+			session.commit();
+		} catch (Exception e) {
+			System.out.println("deleteReserByUserId 에러");
+			e.printStackTrace();
+		}
+		return cnt;
 	}
 	
 }

@@ -11,7 +11,7 @@
         </select>
         
      <select id="getMemberNo" parameterType="String" resultType="Integer">  
-     select num from user where userid=#{userid};
+     select num from user where userid=#{id};
         </select>
         
      <select id="validMemberId" parameterType="String" resultType="Integer">
@@ -44,5 +44,17 @@
     	select userid from user where num=#{num}
     </select>
     
+    <update id="updateUser" parameterType="member">
+    	update user
+    	set name = #{name},
+    		pwd = #{pwd},
+    		email = #{email},
+    		phone = #{phone}
+    	where userid = #{userid}
+    </update>
+    
+    <delete id="deleteReserByUserId" parameterType="String">
+    delete from reservation where userid=#{userid};
+    </delete>
    
 </mapper>

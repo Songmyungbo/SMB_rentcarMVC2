@@ -19,7 +19,7 @@ public class DeleteRentCarController implements Controller{
 		RentcarDAO.getInstance().deleteRentCar(num);
 		String ctx = request.getContextPath();
 		response.setContentType("text/html; charset=UTF-8");
-		response.getWriter().println("<script>alert('차량이 성공적으로 삭제되었습니다.'); location.href='" + ctx + "/carReservMain.do';</script>");
+		response.getWriter().println("<script>alert('차량이 삭제되었습니다!'); location.href='" + ctx + "/carReservMain.do';</script>");
 		response.getWriter().flush();
 		return null;
 		

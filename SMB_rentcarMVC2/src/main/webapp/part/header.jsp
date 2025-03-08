@@ -31,6 +31,9 @@
 			<a href="${ctx}/insertCar.do">차량업로드</a>          
           </c:if>
           <c:if test="${log ne null}">
+          <c:set var="user" value="${sessionScope.user}" />
+            <span style="float:right; margin-top: 40px;">${user.name}님 어서오세요</span>
+            <a href="${ctx}/userInfo.do">내 정보</a>
             <a href="${ctx}/logOut.do">로그아웃</a>
           </c:if>
           <c:if test="${log eq -1}">

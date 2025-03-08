@@ -22,6 +22,7 @@ public class MemberDeleteController implements Controller{
 		
 		int cnt = UserDAO.getInstance().memberDelete(request.getParameter("id"));
 		if(cnt > 0) {
+			int reservationDeleted = UserDAO.getInstance().deleteReserByUserId(request.getParameter("id"));
 			return "redirect:" + ctx + "/memberList.do";
 		}else {
 			throw new ServletException("not delete");

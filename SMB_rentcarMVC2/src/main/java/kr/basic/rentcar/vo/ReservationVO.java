@@ -12,6 +12,9 @@ public class ReservationVO {
 	private int usenavi;
 	private int useseat;
 	
+
+	
+
 	
 	@Override
 	public String toString() {

@@ -26,10 +26,7 @@
 			<td>${member.pwd}</td>	
 			<td>${member.email}</td>	
 			<td>${member.phone}</td>
-		    <td><input type="button" value="삭제" class="btn-del"  onclick="deleteFn('${member.userid}','${member.num}')"
-    	    <c:if test="${loginId!=member.userid and loginId!='admin'}"> 
-    	    	disabled="disabled"
-          	</c:if>/></td>
+		    <td><input type="button" value="삭제" class="btn-del"  onclick="deleteFn('${member.userid}','${member.num}')"/></td>
 		
 		</tr>
 	</c:forEach>

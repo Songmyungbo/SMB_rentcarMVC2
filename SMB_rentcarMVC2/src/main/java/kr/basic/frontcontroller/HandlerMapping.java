@@ -24,6 +24,9 @@ import kr.basic.controller.user.MemberAddController;
 import kr.basic.controller.user.MemberDeleteController;
 import kr.basic.controller.user.MemberJoinController;
 import kr.basic.controller.user.MemberListController;
+import kr.basic.controller.user.UserInfoController;
+import kr.basic.controller.user.UserInfoDeleteController;
+import kr.basic.controller.user.UserInfoUpdateController;
 import kr.basic.controller.user.VaildIdAjaxController;
 
 
@@ -41,6 +44,9 @@ public class HandlerMapping {
 		mappings.put("/memberAdd.do", new MemberAddController());
 		mappings.put("/memberList.do", new MemberListController());
 		mappings.put("/memberDelete.do", new MemberDeleteController());
+		mappings.put("/userInfo.do",new UserInfoController());
+		mappings.put("/userInfoUpdate.do", new UserInfoUpdateController());
+        mappings.put("/userInfoDelete.do", new UserInfoDeleteController());
 		
 		
 		mappings.put("/registerCar.do", new RegisterCarController());

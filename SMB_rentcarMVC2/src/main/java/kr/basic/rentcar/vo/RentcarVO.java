@@ -12,7 +12,7 @@ public class RentcarVO {
 	private String img;
 	private String info;
 	
-	
+
 	public int getNum() {
 		return num;
 	}
