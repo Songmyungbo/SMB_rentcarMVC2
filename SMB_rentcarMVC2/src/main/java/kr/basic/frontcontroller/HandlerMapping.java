@@ -3,6 +3,7 @@ package kr.basic.frontcontroller;
 import java.util.HashMap;
 
 
+
 import kr.basic.controller.rentcar.CarInfoController;
 import kr.basic.controller.rentcar.DeleteRentCarController;
 import kr.basic.controller.rentcar.InsertCarController;
@@ -28,6 +29,7 @@ import kr.basic.controller.user.UserInfoController;
 import kr.basic.controller.user.UserInfoDeleteController;
 import kr.basic.controller.user.UserInfoUpdateController;
 import kr.basic.controller.user.VaildIdAjaxController;
+import kr.basic.controller.user.BoadListController;
 
 
 
@@ -65,7 +67,7 @@ public class HandlerMapping {
         mappings.put("/deleteRentCar.do", new DeleteRentCarController());
         mappings.put("/updateRentCar.do", new UpdateRentcarController());
         mappings.put("/updateRentCarAprocess.do", new UpdateRentcarAProController());
-        
+        mappings.put("/board.do", new BoadListController());
         
 	}
 
