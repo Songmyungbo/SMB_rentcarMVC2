@@ -17,22 +17,9 @@
     text-transform: uppercase;
 }
 
-.reservation-details {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 .car-info {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.car-name {
-    color: #2c3e50;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
 }
 
 .registerCar-Photo {
@@ -46,12 +33,13 @@
 }
 
 .reservation-table {
+    max-width: 600px;
     width: 100%;
     border-collapse: collapse;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 auto 20px;
+    margin: 0 auto;
 }
 
 .reservation-row {
@@ -74,40 +62,41 @@
     width: 70%;
 }
 
-.reservation-row ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.reservation-row li {
-    margin: 5px 0;
-}
-
-.total-price {
-    font-weight: bold;
-    color: #2c3e50;
-    font-size: 1.2em;
-}
-
 .button-container {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+    width: 100%;
 }
 
-.btn {
-    display: inline-block;
+.action-btn {
     padding: 10px 20px;
-    background: #007bff;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
 }
 
-.btn:hover {
-    background: #0056b3;
+.update-btn {
+    background: #007bff;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.action-btn:hover {
     transform: translateY(-2px);
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+.delete-btn:hover {
+    background: #c82333;
 }

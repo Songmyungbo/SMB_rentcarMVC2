@@ -5,7 +5,7 @@
     <c:forEach var="car" items="${list}">
         <div class="car-card">
             <a href="${ctx}/carReserveInfo.do?num=${car.num}">
-                <img class="car-image" src="${ctx}/img/${car.img}" alt="${car.name}">
+                <img class="car-image" src="${ctx}/img/${car.img}">
             </a>
             <div class="car-name">${car.name}</div>
         </div>

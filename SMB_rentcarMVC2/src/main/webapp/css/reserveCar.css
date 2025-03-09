@@ -4,11 +4,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 200px); 
+    min-height: calc(100vh - 200px);
     width: 100%;
 }
 
-.reservation-title {
+.car-title {
     text-align: center;
     color: #2c3e50;
     font-size: 32px;
@@ -17,97 +17,85 @@
     text-transform: uppercase;
 }
 
-.reservation-details {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-}
 
-.car-info {
+.reserveCar-Photo {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.car-name {
-    color: #2c3e50;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.registerCar-Photo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.registerCar-Photo img {
+.reserveCar-Photo img {
     max-width: 100%;
     height: auto;
 }
 
-.reservation-table {
+.car-info {
+    max-width: 600px;
     width: 100%;
     border-collapse: collapse;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 auto 20px;
+    margin: 0 auto;
 }
 
-.reservation-row {
+.info-row {
     padding: 10px 0;
 }
 
-.reservation-row th {
+.info-row th {
     font-size: 14px;
     color: #2c3e50;
     font-weight: 600;
     padding: 10px 15px;
     text-align: right;
     width: 30%;
+    vertical-align: top; 
 }
 
-.reservation-row td {
+.info-row td {
     font-size: 14px;
     color: #2c3e50;
     padding: 10px 15px;
     width: 70%;
-}
-
-.reservation-row ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.reservation-row li {
-    margin: 5px 0;
-}
-
-.total-price {
-    font-weight: bold;
-    color: #2c3e50;
-    font-size: 1.2em;
+    min-width: 300px;
 }
 
 .button-container {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-.btn {
-    display: inline-block;
+.reserve-Btn,
+.update-Btn,
+.remove-Btn {
     padding: 10px 20px;
     background: #007bff;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+    margin: 5px;
+    min-width: 100px; 
 }
 
-.btn:hover {
+.reserve-Btn:hover,
+.update-Btn:hover,
+.remove-Btn:hover {
     background: #0056b3;
     transform: translateY(-2px);
     transition: background 0.3s ease, transform 0.3s ease;
 }
+
+.sold-out {
+    text-align: center;
+    color: #dc3545;
+    font-size: 18px;
+    margin: 20px 0;
+}
+

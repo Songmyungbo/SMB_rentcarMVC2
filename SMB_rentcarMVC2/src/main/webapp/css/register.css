@@ -8,32 +8,24 @@
     width: 100%;
 }
 
-.reservation-title {
+
+.car-title {
     text-align: center;
     color: #2c3e50;
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.reservation-details {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.car-info {
+.reserve-quantity {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.car-name {
     color: #2c3e50;
     font-size: 24px;
+    margin-bottom: 20px;
     font-weight: 600;
-    margin-bottom: 10px;
 }
+
 
 .registerCar-Photo {
     text-align: center;
@@ -45,20 +37,22 @@
     height: auto;
 }
 
-.reservation-table {
+
+.car-options {
+    max-width: 600px;
     width: 100%;
     border-collapse: collapse;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 auto 20px;
+    margin: 0 auto;
 }
 
-.reservation-row {
+.option-row {
     padding: 10px 0;
 }
 
-.reservation-row th {
+.option-row th {
     font-size: 14px;
     color: #2c3e50;
     font-weight: 600;
@@ -67,46 +61,36 @@
     width: 30%;
 }
 
-.reservation-row td {
+.option-row td {
     font-size: 14px;
     color: #2c3e50;
     padding: 10px 15px;
     width: 70%;
 }
 
-.reservation-row ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.option-row select,
+.option-row input[type="date"] {
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 70%;
 }
 
-.reservation-row li {
-    margin: 5px 0;
-}
 
-.total-price {
-    font-weight: bold;
-    color: #2c3e50;
-    font-size: 1.2em;
-}
-
-.button-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.btn {
-    display: inline-block;
+.next-btn {
     padding: 10px 20px;
     background: #007bff;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+    margin: 5px;
 }
 
-.btn:hover {
+.next-btn:hover {
     background: #0056b3;
     transform: translateY(-2px);
     transition: background 0.3s ease, transform 0.3s ease;

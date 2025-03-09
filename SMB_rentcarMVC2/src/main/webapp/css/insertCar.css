@@ -1,0 +1,106 @@
+
+.page-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 200px); 
+    width: 100%;
+}
+
+.upload-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.upload-table {
+    max-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.upload-row {
+    padding: 10px 0;
+}
+
+.upload-row th {
+    font-size: 14px;
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 10px 15px;
+    text-align: right;
+    width: 30%;
+}
+
+.upload-row td {
+    font-size: 14px;
+    color: #2c3e50;
+    padding: 10px 15px;
+    width: 70%;
+}
+
+.input-field {
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.input-field[type="file"] {
+    padding: 8px 0; 
+}
+
+textarea.input-field {
+    resize: vertical;
+}
+
+.button-cell {
+    text-align: center;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.upload-btn {
+    background: #007bff;
+}
+
+.cancel-btn {
+    background: #6c757d;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #0056b3;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+}

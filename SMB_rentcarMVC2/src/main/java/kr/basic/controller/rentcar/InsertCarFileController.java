@@ -48,7 +48,7 @@ public class InsertCarFileController implements Controller{
         String ctx = request.getContextPath();
         
         response.setContentType("text/html; charset=UTF-8");
-        response.getWriter().println("<script>alert('차량이 성공적으로 업로드되었습니다.'); location.href='" + ctx + "/carReservMain.do';</script>");
+        response.getWriter().println("<script>alert('차량이 업로드되었습니다.'); location.href='" + ctx + "/carReservMain.do';</script>");
         return null;
 		
 		

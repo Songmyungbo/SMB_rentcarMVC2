@@ -6,3 +6,4 @@
 </div>
 
 <%@ include file="./part/footer.jsp" %>
+

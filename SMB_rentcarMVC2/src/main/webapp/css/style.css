@@ -116,26 +116,26 @@ nav a:hover {
     transform: scale(1.02);
 }
 
-/* 차량 목록 스타일 (Flex로 변경) */
+
 .car-list {
     display: flex;
-    flex-wrap: wrap; /* 줄 바꿈 허용 */
-    gap: 30px; /* 카드 간격 */
+    flex-wrap: wrap; 
+    gap: 30px; 
     max-width: 1400px;
-    margin: 40px auto; /* 중앙 정렬 및 상하 여백 */
+    margin: 40px auto;
     padding: 0 20px;
-    justify-content: center; /* 카드를 중앙 정렬 */
+    justify-content: center; 
 }
 
 .car-card {
-    flex: 1 1 calc(33.333% - 60px); /* 한 줄에 3개씩 (간격 고려) */
+    flex: 1 1 calc(33.333% - 60px); 
     background: #ffffff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-width: 300px; /* 카드가 너무 작아지지 않도록 최소 너비 설정 */
-    max-width: 400px; /* 카드가 너무 커지지 않도록 최대 너비 설정 */
+    min-width: 300px; 
+    max-width: 400px;
 }
 
 .car-card:hover {
