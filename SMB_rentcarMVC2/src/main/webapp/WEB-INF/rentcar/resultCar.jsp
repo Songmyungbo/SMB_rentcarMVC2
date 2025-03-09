@@ -9,7 +9,7 @@
             <div class="car-info">
                 <h3 class="car-name">예약 차량: ${car.name}</h3>
                 <div class="registerCar-Photo">
-                    <img src="${ctx}/img/${car.img}" width="600" height="500"">
+                    <img src="${ctx}/img/${car.img}" width="600" height="500">
                 </div>
             </div>
 
