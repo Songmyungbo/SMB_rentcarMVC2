@@ -3,8 +3,6 @@
 
 <div class="main-content">
     <img src="${ctx}/img/main.jpg" alt="Main Image" class="main-image"/>
-    
-    
 </div>
 
 <%@ include file="./part/footer.jsp" %>

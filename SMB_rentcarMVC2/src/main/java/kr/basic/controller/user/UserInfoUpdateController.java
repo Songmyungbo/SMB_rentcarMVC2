@@ -40,15 +40,15 @@ public class UserInfoUpdateController implements Controller{
         System.out.println("user=" + user);
         
 //
-//        response.setContentType("text/html; charset=UTF-8");
-//        PrintWriter out = response.getWriter();
+        response.setContentType("text/html; charset=UTF-8");
+        PrintWriter out = response.getWriter();
         String ctx = request.getContextPath();
 
 //        System.out.println("Loaded user: " + user.getName());
-//        out.println("<script>alert('정보가 수정되었습니다!'); location.href='" + ctx + "/userInfo.do';</script>");
+        out.println("<script>alert('정보가 수정되었습니다!'); location.href='" + ctx + "/userInfo.do';</script>");
 //        out.flush();
-        return "redirect:" + ctx + "/userInfo.do";
-		
+//        return "redirect:" + ctx + "/userInfo.do";
+		return null;
 		
 		
 	}
