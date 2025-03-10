@@ -7,6 +7,10 @@
 	<select id="carList" resultType="rentcar">
 		select * from rentcar where total_qty>0
 	</select>
+	<select id="categoryCarList" parameterType="Integer" resultType="rentcar">
+		select * from rentcar where total_qty>0 and category=#{num}
+	</select>
+	
 	<select id="oneCar" parameterType="Integer" resultType="rentcar">
 	select * from rentcar where num=#{num}
 	</select>

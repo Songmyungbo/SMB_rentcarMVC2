@@ -121,14 +121,16 @@ public class UserDAO {
 		return userid;
 	}
 
-	public void updateUser(MemberVO vo) {
+	public int updateUser(MemberVO vo) {
+		int cnt =0;
 		try(SqlSession session = rentcarConfig.getInstance().openSession()){
-			session.update("updateUser",vo);
+			cnt = session.update("updateUser",vo);
 			session.commit();
 		} catch (Exception e) {
 			System.out.println("updateUser 에러");
 			e.printStackTrace();
 		}
+		return cnt;
 		
 	}
 	public int deleteReserByUserId(String userid) {

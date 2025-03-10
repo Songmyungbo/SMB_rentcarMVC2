@@ -35,16 +35,16 @@ public class ResultCarController implements Controller{
 		RentcarVO car = RentcarDAO.getInstance().oneCar(num);
 		int totalQty = car.getTotalQty()-qty; 
 		RentcarDAO.getInstance().updateCarQty(num,totalQty); 
-		
+	
 		int price = (car.getPrice()*dday)*qty; 
 		if(usein == 1) {
-			price += 10000;
+			price += 10000 * dday;
 		}
 		if(usewifi == 1) {
-			price += 10000;
+			price += 10000 * dday;
 		}
 		if(useseat == 1) {
-			price += 10000;
+			price += 10000 * dday;
 		}
 		ReservationVO reservation = new ReservationVO();
         reservation.setNum(num);

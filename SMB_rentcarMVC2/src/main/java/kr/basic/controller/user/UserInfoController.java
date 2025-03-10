@@ -21,8 +21,9 @@ public class UserInfoController implements Controller{
 		
 		int num = UserDAO.getInstance().getMemberNo(id);
 		MemberVO user = UserDAO.getInstance().memberContent(num);
-		
-		request.setAttribute("user", user);
+	
+		request.getSession().setAttribute("user", user);
+		System.out.println("test2222=" + user.getName());
 		
 		return "userInfo";
 	}

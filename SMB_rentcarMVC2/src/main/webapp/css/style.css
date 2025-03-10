@@ -18,11 +18,16 @@ html, body {
 }
 
 header {
-    background-color: #ffffff;
+    position: fixed; 
+    top: 0;       
+    left: 0;        
+    width: 100%; 
+    background-color: #ffffff; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
     z-index: 10;
+}
+body {
+    margin-top: 150px; 
 }
 
 .inner {
@@ -164,6 +169,7 @@ footer {
     text-align: center;
     background-color: #ffffff;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .footer-table {
@@ -172,4 +178,44 @@ footer {
     font-size: 14px;
     color: #6c757d;
     line-height: 1.8;
+}
+
+aside {
+    display:flex;
+    align-items:center;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 105px;
+    height: calc(100vh - 100px);
+    margin-top: 30px;
+    background-color: #ffffff;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+aside ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+
+aside li {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50; 
+    cursor: pointer; 
+    transition: background 0.3s ease, color 0.3s ease; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+
+aside li:hover {
+    background-color: #007bff; 
+    color: white; 
 }

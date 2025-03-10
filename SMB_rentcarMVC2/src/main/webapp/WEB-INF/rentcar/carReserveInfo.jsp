@@ -44,7 +44,8 @@
                 </tr>
                 <tr class="info-row">
                     <th>대여가격</th>
-                    <td>${car.price}원</td>
+                    <td>${car.price}원<input type="hidden" name="price" value="${car.price}" /></td>
+                    
                 </tr>
                 <tr class="info-row">
                     <th>제조회사</th>

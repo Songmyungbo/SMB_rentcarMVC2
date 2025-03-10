@@ -21,7 +21,7 @@
 					</tr>
 					<tr class="reservation-row">
 						<th>수량</th>
-						<td><input type="number" name="qty"
+						<td><input type="number" name="qty" min="1"
 							value="${reservation.qty}" min="1" class="input-field"></td>
 					</tr>
 					<tr class="reservation-row">
@@ -34,8 +34,8 @@
 					</tr>
 					<tr class="reservation-row">
 						<th>대여 일자</th>
-						<td><input type="date" name="rday"
-							value="${reservation.rday}" class="input-field"></td>
+						<td><input type="date" name="rday" id="rday"
+							class="input-field"></td>
 					</tr>
 					<tr class="reservation-row">
 						<th>보험</th>
@@ -80,4 +80,5 @@
 	</div>
 </div>
 
+<script src="${ctx}/js/resultCar.js"></script>
 <%@ include file="../../part/footer.jsp"%>

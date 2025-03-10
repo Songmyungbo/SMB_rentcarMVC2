@@ -31,6 +31,18 @@ public class RentcarDAO {
 
 		return list;
 	}
+	public List<RentcarVO> categoryCarList(int num){
+		List<RentcarVO> list = null;
+		try (SqlSession session = rentcarConfig.getInstance().openSession()) {
+			list = session.selectList("categoryCarList",num);
+
+		} catch (Exception e) {
+			System.out.println("categoryCarList 에러");
+			e.printStackTrace();
+		}
+
+		return list;
+	}
 
 	public RentcarVO oneCar(int num) {
 		RentcarVO vo = null;

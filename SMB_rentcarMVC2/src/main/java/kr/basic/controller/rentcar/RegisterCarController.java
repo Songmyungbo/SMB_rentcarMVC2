@@ -17,11 +17,13 @@ public class RegisterCarController implements Controller{
 		
 		int num = Integer.parseInt(request.getParameter("num"));
 		int qty = Integer.parseInt(request.getParameter("qty"));
+		int price= Integer.parseInt(request.getParameter("price"));
 		
 		RentcarVO vo = RentcarDAO.getInstance().oneCar(num);
 		
 		request.setAttribute("car", vo);
 		request.setAttribute("qty", qty);
+		request.setAttribute("price", price);
 
 		
 		return "registerCar";

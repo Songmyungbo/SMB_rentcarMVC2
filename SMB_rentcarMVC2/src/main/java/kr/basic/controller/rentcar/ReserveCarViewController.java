@@ -39,6 +39,7 @@ public class ReserveCarViewController implements Controller{
 				request.setAttribute("reservList", null);
 			}else {
 				request.setAttribute("reservList", list);
+				
 			}
 		
 			return "carReservView";
